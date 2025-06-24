@@ -2,3 +2,4 @@ title: PagesCMSサンプルブログ
 description: サンプルのブログです
 url: https://himaratsu.github.io
 baseurl: /pagescms-sample
+theme: minima
