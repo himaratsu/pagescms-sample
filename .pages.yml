@@ -2,43 +2,60 @@ media:
   input: media
   output: pagescms-sample/media
 content:
-  - name: posts
-    label: Posts
-    type: collection
-    path: '_posts'
-    view:
-      fields: [ title, published, date ]
+  - name: homepage
+    label: Homepage
+    type: file
+    path: index.md
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
+      - name: title
+        label: Page Title
+        type: string
+      - name: description
+        label: Description
+        type: string
+      - name: body
+        label: Content
+        type: rich-text
+  - name: docs
+    label: Documentation
+    type: collection
+    path: 'docs'
+    view:
+      fields: [ title, nav_order, description ]
+    fields:
       - name: title
         label: Title
         type: string
+      - name: nav_order
+        label: Navigation Order
+        type: number
+        description: Order in navigation menu
+      - name: description
+        label: Description
+        type: string
+        description: Page description for SEO
       - name: body
-        label: Body
+        label: Content
         type: rich-text
   - name: config
-    label: Jekyll config
+    label: Site Configuration
     path: _config.yml
     type: file
     fields:
       - name: title
-        label: Website title
+        label: Site Title
         type: string
       - name: description
-        label: Website description
+        label: Site Description
         type: string
-        description: Will be provused for any page with no description.
       - name: url
-        label: Website URL
+        label: Site URL
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
-      - name: cover
-        label: Preview image
-        type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+      - name: baseurl
+        label: Base URL
+        type: string
+        description: Subpath of your site (e.g. /blog)
+      - name: footer_content
+        label: Footer Content
+        type: string
