@@ -3,7 +3,7 @@ published: true
 date: 2025-06-20
 title: microCMSのコンテンツAPIについて
 ---
-![](/media/CleanShot%202025-06-24%20at%2011.02.22@2x.png)
+![](/pagescms-sample/media/CleanShot%202025-06-24%20at%2011.02.22@2x.png)
 
 # microCMSのコンテンツAPIとは
 

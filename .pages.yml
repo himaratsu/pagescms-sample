@@ -1,4 +1,6 @@
-media: media
+media:
+  input: media
+  output: pagescms-sample/media
 content:
   - name: posts
     label: Posts
