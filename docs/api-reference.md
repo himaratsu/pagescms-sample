@@ -3,6 +3,7 @@ layout: default
 title: APIリファレンス
 nav_order: 3
 description: "実例付きの完全なAPIドキュメント"
+has_children: true
 ---
 
 # APIリファレンス
