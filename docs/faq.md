@@ -1,17 +1,17 @@
 ---
 layout: default
-title: FAQ
+title: よくある質問
 nav_order: 6
-description: "Frequently asked questions"
+description: "よくある質問と回答"
 ---
 
-# Frequently Asked Questions
+# よくある質問
 {: .no_toc }
 
-Common questions and answers about using our platform.
+私たちのプラットフォームの使用に関するよくある質問と回答です。
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## 目次
 {: .no_toc .text-delta }
 
 1. TOC
@@ -19,23 +19,23 @@ Common questions and answers about using our platform.
 
 ---
 
-## General Questions
+## 一般的な質問
 
-### What is this platform?
+### このプラットフォームとは何ですか？
 
-Our platform is a modern web application framework that provides developers with a comprehensive set of tools for building scalable applications. It includes API management, database integration, authentication, and deployment tools.
+私たちのプラットフォームは、開発者がスケーラブルなアプリケーションを構築するための包括的なツールセットを提供するモダンなWebアプリケーションフレームワークです。API管理、データベース統合、認証、デプロイツールが含まれています。
 
-### Is it free to use?
+### 使用は無料ですか？
 
-The platform offers several pricing tiers:
-- **Free Tier**: Up to 1,000 API calls per month, basic features
-- **Pro Tier**: $29/month, up to 100,000 API calls, advanced features
-- **Enterprise**: Custom pricing, unlimited usage, priority support
+プラットフォームでは複数の料金プランを提供しています:
+- **無料プラン**: 月間1,000APIコール、基本機能
+- **Proプラン**: 月額29ドル、月間100,000APIコール、高度な機能
+- **エンタープライズ**: カスタム料金、無制限使用、優先サポート
 
-### What programming languages are supported?
+### サポートされているプログラミング言語は？
 
-We provide SDKs and libraries for:
-- JavaScript/TypeScript (Node.js and browser)
+以下の言語用のSDKとライブラリを提供しています:
+- JavaScript/TypeScript（Node.jsとブラウザ）
 - Python
 - PHP
 - Go
@@ -43,72 +43,72 @@ We provide SDKs and libraries for:
 - Java
 - .NET/C#
 
-## Technical Questions
+## 技術的な質問
 
-### What are the system requirements?
+### システム要件は何ですか？
 
-**Minimum Requirements:**
-- Node.js 14+ (for JavaScript applications)
+**最小要件:**
+- Node.js 14+（JavaScriptアプリケーション用）
 - 2GB RAM
-- 10GB disk space
-- Internet connection for API access
+- 10GB ディスク容量
+- API アクセス用のインターネット接続
 
-**Recommended:**
+**推奨:**
 - Node.js 18+
 - 4GB RAM
-- 25GB disk space
-- SSD storage for better performance
+- 25GB ディスク容量
+- より良いパフォーマンスのためのSSDストレージ
 
-### Can I use this with my existing database?
+### 既存のデータベースでこれを使用できますか？
 
-Yes! The platform supports multiple database types:
-- PostgreSQL (recommended)
+はい！プラットフォームは複数のデータベースタイプをサポートしています:
+- PostgreSQL（推奨）
 - MySQL/MariaDB
 - MongoDB
-- SQLite (for development)
-- Redis (for caching)
+- SQLite（開発用）
+- Redis（キャッシュ用）
 
-### How do I migrate from another platform?
+### 他のプラットフォームからの移行方法は？
 
-We provide migration tools and guides for common platforms:
+一般的なプラットフォーム用の移行ツールとガイドを提供しています:
 
-1. **Export your data** from your current platform
-2. **Use our migration CLI tool**:
+1. **現在のプラットフォームからデータをエクスポート**
+2. **移行CLIツールを使用**:
    ```bash
    npm install -g @ourplatform/migrate
    migrate --from platform_name --input data.json
    ```
-3. **Follow our migration guide** specific to your current platform
-4. **Test thoroughly** before switching production traffic
+3. **現在のプラットフォーム固有の移行ガイドに従う**
+4. **本番トラフィックを切り替える前に十分にテスト**
 
-### What about data security?
+### データセキュリティについて教えてください
 
-Security is our top priority:
-- **Encryption**: All data encrypted in transit (TLS 1.3) and at rest (AES-256)
-- **Authentication**: Support for JWT, OAuth 2.0, and API keys
-- **Compliance**: SOC 2 Type II, GDPR, and HIPAA compliant
-- **Monitoring**: 24/7 security monitoring and threat detection
-- **Backups**: Daily automated backups with point-in-time recovery
+セキュリティは最優先事項です:
+- **暗号化**: 転送中（TLS 1.3）および保存中（AES-256）のすべてのデータを暗号化
+- **認証**: JWT、OAuth 2.0、APIキーをサポート
+- **コンプライアンス**: SOC 2 Type II、GDPR、HIPAA準拠
+- **監視**: 24時間365日のセキュリティ監視と脅威検出
+- **バックアップ**: ポイントインタイム復旧機能付きの日次自動バックアップ
 
-## API Questions
+## API関連の質問
 
-### What's the rate limit for API calls?
+### APIコールのレート制限は？
 
-Rate limits depend on your plan:
-- **Free**: 100 requests per hour
-- **Pro**: 10,000 requests per hour
-- **Enterprise**: Custom limits based on your needs
+レート制限はプランによって異なります:
+- **無料**: 1時間あたり100リクエスト
+- **Pro**: 1時間あたり10,000リクエスト
+- **エンタープライズ**: ニーズに基づくカスタム制限
 
-Rate limit headers are included in all responses:
+レート制限ヘッダーはすべてのレスポンスに含まれています:
 ```http
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 999
 X-RateLimit-Reset: 1623456789
 ```
 
-### How do I authenticate API requests?
+### APIリクエストの認証方法は？
 
-Use your API key in the Authorization header:
+AuthorizationヘッダーでAPIキーを使用:
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
@@ -116,15 +116,15 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
      https://api.example.com/v1/endpoint
 ```
 
-### Can I use webhooks?
+### Webhookを使用できますか？
 
-Yes! Webhooks are available for:
-- User registration/updates
-- Data changes
-- Payment events
-- System alerts
+はい！Webhookは以下で利用可能です:
+- ユーザー登録/更新
+- データ変更
+- 支払いイベント
+- システムアラート
 
-Configure webhooks in your dashboard or via API:
+ダッシュボードまたはAPI経由でWebhookを設定:
 
 ```javascript
 const webhook = await client.webhooks.create({
@@ -134,27 +134,27 @@ const webhook = await client.webhooks.create({
 });
 ```
 
-### What data formats are supported?
+### サポートされているデータ形式は？
 
-We support standard web formats:
-- **JSON** (primary format for APIs)
-- **XML** (available on request)
-- **CSV** (for bulk exports)
-- **YAML** (for configuration files)
+標準的なWeb形式をサポートしています:
+- **JSON**（APIの主要形式）
+- **XML**（リクエストに応じて利用可能）
+- **CSV**（一括エクスポート用）
+- **YAML**（設定ファイル用）
 
-## Development Questions
+## 開発関連の質問
 
-### Which IDE/editor should I use?
+### どのIDE/エディタを使用すべきですか？
 
-We recommend:
-- **VS Code** with our official extension
-- **IntelliJ IDEA** with our plugin
-- **Vim/Neovim** with language server support
-- **Sublime Text** with our package
+以下を推奨します:
+- **VS Code** 公式拡張機能付き
+- **IntelliJ IDEA** プラグイン付き
+- **Vim/Neovim** 言語サーバーサポート付き
+- **Sublime Text** パッケージ付き
 
-### Is there a local development environment?
+### ローカル開発環境はありますか？
 
-Yes! Use our CLI tool to set up a local environment:
+はい！CLIツールを使用してローカル環境をセットアップ:
 
 ```bash
 npm install -g @ourplatform/cli
@@ -163,62 +163,62 @@ cd my-project
 ourplatform dev
 ```
 
-This creates a local development server with:
-- Hot reloading
-- Mock API endpoints
-- Database seeding
-- Debug logging
+これにより以下を含むローカル開発サーバーが作成されます:
+- ホットリロード
+- モックAPIエンドポイント
+- データベースシーディング
+- デバッグログ
 
-### How do I run tests?
+### テストの実行方法は？
 
-We provide testing utilities and examples:
+テストユーティリティと例を提供しています:
 
 ```bash
-# Unit tests
+# ユニットテスト
 npm test
 
-# Integration tests
+# 統合テスト
 npm run test:integration
 
-# End-to-end tests
+# エンドツーエンドテスト
 npm run test:e2e
 
-# Coverage report
+# カバレッジレポート
 npm run test:coverage
 ```
 
-Example test:
+テスト例:
 ```javascript
 const { TestClient } = require('@ourplatform/testing');
 
 describe('Users API', () => {
   const client = new TestClient();
   
-  it('should create a new user', async () => {
+  it('新しいユーザーを作成する', async () => {
     const user = await client.users.create({
-      name: 'Test User',
+      name: 'テストユーザー',
       email: 'test@example.com'
     });
     
     expect(user.id).toBeDefined();
-    expect(user.name).toBe('Test User');
+    expect(user.name).toBe('テストユーザー');
   });
 });
 ```
 
-## Deployment Questions
+## デプロイ関連の質問
 
-### Where can I deploy my application?
+### アプリケーションをどこにデプロイできますか？
 
-The platform works with any hosting provider:
-- **Cloud Platforms**: AWS, Google Cloud, Azure, DigitalOcean
-- **Serverless**: Vercel, Netlify, AWS Lambda
-- **Containers**: Docker, Kubernetes
-- **Traditional**: VPS, dedicated servers
+プラットフォームは任意のホスティングプロバイダーで動作します:
+- **クラウドプラットフォーム**: AWS、Google Cloud、Azure、DigitalOcean
+- **サーバーレス**: Vercel、Netlify、AWS Lambda
+- **コンテナ**: Docker、Kubernetes
+- **従来型**: VPS、専用サーバー
 
-### How do I set up CI/CD?
+### CI/CDの設定方法は？
 
-Example GitHub Actions workflow:
+GitHub Actionsワークフローの例:
 
 ```yaml
 name: Deploy
@@ -243,71 +243,71 @@ jobs:
         run: npm run deploy
 ```
 
-### What about environment variables in production?
+### 本番環境での環境変数について
 
-Best practices:
-- Use your hosting provider's environment variable system
-- Never commit secrets to version control
-- Use different API keys for different environments
-- Consider using secret management services (AWS Secrets Manager, etc.)
+ベストプラクティス:
+- ホスティングプロバイダーの環境変数システムを使用
+- 秘密情報をバージョン管理にコミットしない
+- 異なる環境で異なるAPIキーを使用
+- シークレット管理サービス（AWS Secrets Managerなど）の使用を検討
 
-## Billing Questions
+## 請求関連の質問
 
-### How is usage calculated?
+### 使用量はどのように計算されますか？
 
-Usage is measured by:
-- **API calls**: Each request to our API
-- **Storage**: Data stored in our systems
-- **Bandwidth**: Data transferred
-- **Compute time**: Processing time for complex operations
+使用量は以下で測定されます:
+- **APIコール**: 私たちのAPIへの各リクエスト
+- **ストレージ**: システムに保存されたデータ
+- **帯域幅**: 転送されたデータ
+- **計算時間**: 複雑な操作の処理時間
 
-### Can I monitor my usage?
+### 使用量を監視できますか？
 
-Yes! Check your usage in:
-- **Dashboard**: Real-time usage metrics
-- **API**: Programmatic access to usage data
-- **Alerts**: Set up notifications for usage thresholds
+はい！以下で使用量を確認できます:
+- **ダッシュボード**: リアルタイム使用量メトリクス
+- **API**: 使用量データへのプログラマティックアクセス
+- **アラート**: 使用量のしきい値に対する通知設定
 
-### What happens if I exceed my limits?
+### 制限を超えた場合はどうなりますか？
 
-- **Free tier**: API calls are throttled after limit
-- **Paid tiers**: Additional usage is billed at standard rates
-- **Enterprise**: Custom overage agreements
+- **無料プラン**: 制限後にAPIコールが調整される
+- **有料プラン**: 追加使用量は標準料金で請求される
+- **エンタープライズ**: カスタム超過契約
 
-## Support Questions
+## サポート関連の質問
 
-### How do I get help?
+### ヘルプを得る方法は？
 
-Multiple support channels available:
-- **Documentation**: Comprehensive guides and references
-- **Community Forum**: Ask questions and share knowledge
-- **GitHub Issues**: Report bugs and request features
-- **Email Support**: Direct support for paid plans
-- **Priority Support**: Dedicated support for Enterprise plans
+複数のサポートチャネルが利用可能です:
+- **ドキュメント**: 包括的なガイドとリファレンス
+- **コミュニティフォーラム**: 質問をして知識を共有
+- **GitHub Issues**: バグ報告と機能リクエスト
+- **メールサポート**: 有料プランの直接サポート
+- **優先サポート**: エンタープライズプランの専用サポート
 
-### What's your SLA?
+### SLAは？
 
-Service Level Agreements:
-- **Free**: Best effort, no SLA
-- **Pro**: 99.9% uptime SLA
-- **Enterprise**: 99.99% uptime SLA with 24/7 support
+サービスレベル合意書:
+- **無料**: ベストエフォート、SLA なし
+- **Pro**: 99.9% アップタイム SLA
+- **エンタープライズ**: 24時間365日サポート付きの99.99% アップタイム SLA
 
-### How do I report a bug?
+### バグを報告する方法は？
 
-1. **Check existing issues** on GitHub
-2. **Gather information**:
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details
-   - Error messages/logs
-3. **Create a detailed issue** with all relevant information
-4. **Follow up** on the issue for updates
+1. **GitHubで既存の課題を確認**
+2. **情報を収集**:
+   - 再現手順
+   - 期待される動作と実際の動作
+   - 環境の詳細
+   - エラーメッセージ/ログ
+3. **すべての関連情報を含む詳細な課題を作成**
+4. **更新のために課題をフォローアップ**
 
-## Still Have Questions?
+## まだ質問がありますか？
 
-Can't find what you're looking for?
+お探しのものが見つかりませんか？
 
-- **Search our documentation**: Use the search bar above
-- **Visit our community forum**: [community.example.com](https://community.example.com)
-- **Contact support**: [support@example.com](mailto:support@example.com)
-- **Schedule a demo**: [Book a call with our team](https://calendly.com/example-team)
+- **ドキュメントを検索**: 上記の検索バーを使用
+- **コミュニティフォーラムを訪問**: [community.example.com](https://community.example.com)
+- **サポートに連絡**: [support@example.com](mailto:support@example.com)
+- **デモを予約**: [チームとの通話を予約](https://calendly.com/example-team)

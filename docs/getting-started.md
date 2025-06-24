@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Getting Started
+title: スタートガイド
 nav_order: 2
-description: "Quick start guide to get up and running"
+description: "素早く始めるためのクイックスタートガイド"
 ---
 
-# Getting Started
+# スタートガイド
 {: .no_toc }
 
-This guide will help you get started quickly with our platform.
+このガイドでは、私たちのプラットフォームを素早く始める方法をご説明します。
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## 目次
 {: .no_toc .text-delta }
 
 1. TOC
@@ -19,58 +19,58 @@ This guide will help you get started quickly with our platform.
 
 ---
 
-## Prerequisites
+## 前提条件
 
-Before you begin, make sure you have the following:
+始める前に、以下がインストールされていることを確認してください:
 
-- Node.js (version 14 or higher)
-- npm or yarn package manager
-- Git installed on your system
-- A code editor (VS Code recommended)
+- Node.js（バージョン14以上）
+- npmまたはyarnパッケージマネージャー
+- Gitがシステムにインストールされていること
+- コードエディタ（VS Code推奨）
 
-## Installation
+## インストール
 
-### Step 1: Clone the Repository
+### ステップ1: リポジトリのクローン
 
 ```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
 
-### Step 2: Install Dependencies
+### ステップ2: 依存関係のインストール
 
 ```bash
 npm install
-# or
+# または
 yarn install
 ```
 
-### Step 3: Environment Setup
+### ステップ3: 環境設定
 
-Create a `.env` file in your project root:
+プロジェクトルートに `.env` ファイルを作成します:
 
 ```bash
-# API Configuration
+# API設定
 API_URL=https://api.example.com
 API_KEY=your_api_key_here
 
-# Database Configuration
+# データベース設定
 DATABASE_URL=your_database_url
 ```
 
-### Step 4: Start Development Server
+### ステップ4: 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
+# または
 yarn dev
 ```
 
-Your application should now be running at `http://localhost:3000`.
+アプリケーションが `http://localhost:3000` で実行されているはずです。
 
-## Quick Example
+## クイック例
 
-Here's a simple example to get you started:
+始めるための簡単な例を以下に示します:
 
 ```javascript
 import { ApiClient } from '@your-package/sdk';
@@ -83,25 +83,25 @@ const client = new ApiClient({
 async function fetchData() {
   try {
     const response = await client.get('/users');
-    console.log('Users:', response.data);
+    console.log('ユーザー:', response.data);
   } catch (error) {
-    console.error('Error fetching users:', error);
+    console.error('ユーザー取得エラー:', error);
   }
 }
 
 fetchData();
 ```
 
-## Next Steps
+## 次のステップ
 
-- Read the [API Reference]({{ site.baseurl }}/docs/api-reference/) for detailed API documentation
-- Check out the [Configuration Guide]({{ site.baseurl }}/docs/configuration/) to customize your setup
-- Visit our [FAQ]({{ site.baseurl }}/docs/faq/) for common questions
+- 詳細なAPIドキュメントについては[APIリファレンス]({{ site.baseurl }}/docs/api-reference/)をお読みください
+- セットアップをカスタマイズするには[設定ガイド]({{ site.baseurl }}/docs/configuration/)をご確認ください
+- よくある質問については[FAQ]({{ site.baseurl }}/docs/faq/)をご覧ください
 
-## Need Help?
+## ヘルプが必要ですか？
 
-If you run into any issues:
+問題が発生した場合:
 
-1. Check our [Troubleshooting Guide]({{ site.baseurl }}/docs/troubleshooting/)
-2. Search existing issues on [GitHub](https://github.com/himaratsu/pagescms-sample/issues)
-3. Create a new issue if you can't find a solution
+1. [トラブルシューティングガイド]({{ site.baseurl }}/docs/troubleshooting/)をご確認ください
+2. [GitHub](https://github.com/himaratsu/pagescms-sample/issues)で既存の問題を検索してください
+3. 解決策が見つからない場合は、新しいissueを作成してください

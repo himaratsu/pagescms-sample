@@ -1,5 +1,5 @@
-title: Documentation Site
-description: A comprehensive documentation site built with Just the Docs
+title: ドキュメントサイト
+description: Just the Docsで構築された包括的なドキュメントサイト
 url: https://himaratsu.github.io
 baseurl: /pagescms-sample
 
@@ -25,7 +25,7 @@ heading_anchors: true
 
 # Aux links
 aux_links:
-  "GitHub Repository":
+  "GitHubリポジトリ":
     - "https://github.com/himaratsu/pagescms-sample"
 
 # Makes Aux links open in a new tab
@@ -35,7 +35,7 @@ aux_links_new_tab: true
 nav_sort: case_insensitive
 
 # Footer content
-footer_content: "Built with Jekyll and Just the Docs theme"
+footer_content: "JekyllとJust the Docsテーマで構築"
 
 # Footer last edit timestamp
 last_edit_timestamp: true

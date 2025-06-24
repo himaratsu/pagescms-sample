@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Configuration
+title: 設定ガイド
 nav_order: 4
-description: "Setup and configuration instructions"
+description: "セットアップと設定の手順"
 ---
 
-# Configuration Guide
+# 設定ガイド
 {: .no_toc }
 
-Learn how to configure and customize your application for different environments.
+さまざまな環境でアプリケーションを設定およびカスタマイズする方法を学びます。
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## 目次
 {: .no_toc .text-delta }
 
 1. TOC
@@ -19,63 +19,63 @@ Learn how to configure and customize your application for different environments
 
 ---
 
-## Environment Configuration
+## 環境設定
 
-### Development Environment
+### 開発環境
 
-Create a `.env.development` file in your project root:
+プロジェクトルートに `.env.development` ファイルを作成します:
 
 ```bash
-# API Configuration
+# API設定
 API_URL=http://localhost:8080/api/v1
 API_KEY=dev_api_key_123
 DEBUG=true
 
-# Database Configuration
+# データベース設定
 DATABASE_URL=postgresql://user:password@localhost:5432/myapp_dev
 REDIS_URL=redis://localhost:6379
 
-# Feature Flags
+# フィーチャーフラグ
 ENABLE_ANALYTICS=false
 ENABLE_CACHING=true
 ENABLE_LOGGING=true
 ```
 
-### Production Environment
+### 本番環境
 
-For production, use these recommended settings:
+本番環境では、これらの推奨設定を使用してください:
 
 ```bash
-# API Configuration
+# API設定
 API_URL=https://api.yourapp.com/v1
 API_KEY=prod_api_key_secure_123
 DEBUG=false
 
-# Database Configuration
+# データベース設定
 DATABASE_URL=postgresql://user:password@prod-db:5432/myapp_prod
 REDIS_URL=redis://prod-redis:6379
 
-# Feature Flags
+# フィーチャーフラグ
 ENABLE_ANALYTICS=true
 ENABLE_CACHING=true
 ENABLE_LOGGING=true
 
-# Security
+# セキュリティ
 SESSION_SECRET=your_super_secure_session_secret
 JWT_SECRET=your_jwt_secret_key
 CORS_ORIGIN=https://yourapp.com
 ```
 
-## Application Configuration
+## アプリケーション設定
 
-### Basic Settings
+### 基本設定
 
-Configure your application using the `config.json` file:
+`config.json` ファイルを使用してアプリケーションを設定します:
 
 ```json
 {
   "app": {
-    "name": "My Application",
+    "name": "私のアプリケーション",
     "version": "1.0.0",
     "port": 3000,
     "host": "localhost"
@@ -102,9 +102,9 @@ Configure your application using the `config.json` file:
 }
 ```
 
-### Advanced Settings
+### 高度な設定
 
-For more advanced configurations, use the `config.advanced.json`:
+より高度な設定には、`config.advanced.json` を使用します:
 
 ```json
 {
@@ -141,11 +141,11 @@ For more advanced configurations, use the `config.advanced.json`:
 }
 ```
 
-## Database Configuration
+## データベース設定
 
-### PostgreSQL Setup
+### PostgreSQLセットアップ
 
-1. Install PostgreSQL:
+1. PostgreSQLをインストール:
    ```bash
    # Ubuntu/Debian
    sudo apt-get install postgresql postgresql-contrib
@@ -154,21 +154,21 @@ For more advanced configurations, use the `config.advanced.json`:
    brew install postgresql
    ```
 
-2. Create database and user:
+2. データベースとユーザーを作成:
    ```sql
    CREATE DATABASE myapp_dev;
    CREATE USER myapp_user WITH PASSWORD 'secure_password';
    GRANT ALL PRIVILEGES ON DATABASE myapp_dev TO myapp_user;
    ```
 
-3. Update your environment variables:
+3. 環境変数を更新:
    ```bash
    DATABASE_URL=postgresql://myapp_user:secure_password@localhost:5432/myapp_dev
    ```
 
-### Redis Setup
+### Redisセットアップ
 
-1. Install Redis:
+1. Redisをインストール:
    ```bash
    # Ubuntu/Debian
    sudo apt-get install redis-server
@@ -177,7 +177,7 @@ For more advanced configurations, use the `config.advanced.json`:
    brew install redis
    ```
 
-2. Start Redis service:
+2. Redisサービスを開始:
    ```bash
    # Ubuntu/Debian
    sudo systemctl start redis-server
@@ -186,18 +186,18 @@ For more advanced configurations, use the `config.advanced.json`:
    brew services start redis
    ```
 
-## Web Server Configuration
+## Webサーバー設定
 
-### Nginx Configuration
+### Nginx設定
 
-Example Nginx configuration for production:
+本番環境でのNginx設定例:
 
 ```nginx
 server {
     listen 80;
     server_name yourapp.com www.yourapp.com;
     
-    # Redirect HTTP to HTTPS
+    # HTTPからHTTPSへリダイレクト
     return 301 https://$server_name$request_uri;
 }
 
@@ -205,16 +205,16 @@ server {
     listen 443 ssl http2;
     server_name yourapp.com www.yourapp.com;
     
-    # SSL Configuration
+    # SSL設定
     ssl_certificate /path/to/certificate.crt;
     ssl_certificate_key /path/to/private.key;
     
-    # Security Headers
+    # セキュリティヘッダー
     add_header X-Frame-Options DENY;
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
     
-    # Proxy to Node.js application
+    # Node.jsアプリケーションへのプロキシ
     location / {
         proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
@@ -227,7 +227,7 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
     
-    # Static file serving
+    # 静的ファイル配信
     location /static/ {
         alias /path/to/static/files/;
         expires 1y;
@@ -236,25 +236,25 @@ server {
 }
 ```
 
-## Monitoring Configuration
+## 監視設定
 
-### Application Monitoring
+### アプリケーション監視
 
-Configure application monitoring using environment variables:
+環境変数を使用してアプリケーション監視を設定:
 
 ```bash
-# Monitoring
+# 監視
 MONITORING_ENABLED=true
 METRICS_PORT=9090
 HEALTH_CHECK_ENDPOINT=/health
 
-# APM (Application Performance Monitoring)
+# APM（アプリケーションパフォーマンス監視）
 APM_SERVICE_NAME=myapp
 APM_SERVER_URL=https://apm.yourapp.com
 APM_SECRET_TOKEN=your_apm_token
 ```
 
-### Health Check Configuration
+### ヘルスチェック設定
 
 ```json
 {
@@ -282,22 +282,22 @@ APM_SECRET_TOKEN=your_apm_token
 }
 ```
 
-## Troubleshooting Configuration
+## 設定のトラブルシューティング
 
-### Common Issues
+### よくある問題
 
-1. **Port already in use**: Change the port in your configuration
-2. **Database connection failed**: Check your DATABASE_URL
-3. **Redis connection failed**: Ensure Redis is running
-4. **SSL certificate errors**: Verify certificate paths and permissions
+1. **ポートが既に使用中**: 設定でポートを変更してください
+2. **データベース接続失敗**: DATABASE_URLを確認してください
+3. **Redis接続失敗**: Redisが動作していることを確認してください
+4. **SSL証明書エラー**: 証明書のパスと権限を確認してください
 
-### Debug Mode
+### デバッグモード
 
-Enable debug mode for detailed logging:
+詳細なログを出力するためにデバッグモードを有効にします:
 
 ```bash
 DEBUG=true
 LOG_LEVEL=debug
 ```
 
-This will provide detailed information about configuration loading and application startup.
+これにより、設定の読み込みとアプリケーションの起動に関する詳細情報が提供されます。

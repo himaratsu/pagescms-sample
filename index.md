@@ -1,34 +1,34 @@
 ---
 layout: default
-title: Home
+title: ホーム
 nav_order: 1
-description: "A comprehensive documentation site for developers"
+description: "開発者向けの包括的なドキュメントサイト"
 permalink: /
 ---
 
-# Welcome to Our Documentation Site
+# ドキュメントサイトへようこそ
 
-This documentation site provides comprehensive guides and references for developers working with our platform.
+このドキュメントサイトでは、私たちのプラットフォームを使用する開発者向けに包括的なガイドとリファレンスを提供しています。
 
-## Quick Start
+## クイックスタート
 
-Get started quickly with our [Getting Started Guide]({{ site.baseurl }}/docs/getting-started/).
+[スタートガイド]({{ site.baseurl }}/docs/getting-started/)で素早く始めましょう。
 
-## What's Included
+## 含まれる内容
 
-- **API Reference**: Complete API documentation with examples
-- **Configuration Guide**: Setup and configuration instructions
-- **Troubleshooting**: Common issues and solutions
-- **FAQ**: Frequently asked questions
+- **APIリファレンス**: 実例付きの完全なAPIドキュメント
+- **設定ガイド**: セットアップと設定の手順
+- **トラブルシューティング**: よくある問題と解決方法
+- **FAQ**: よくある質問
 
-## Navigation
+## ナビゲーション
 
-Use the navigation menu on the left to browse through different sections. You can also use the search functionality to find specific topics.
+左側のナビゲーションメニューを使用して、さまざまなセクションを閲覧できます。また、検索機能を使用して特定のトピックを見つけることもできます。
 
-## Contributing
+## コントリビューション
 
-This documentation is open source. Visit our [GitHub repository](https://github.com/himaratsu/pagescms-sample) to contribute improvements or report issues.
+このドキュメントはオープンソースです。改善の提案や問題の報告は、[GitHubリポジトリ](https://github.com/himaratsu/pagescms-sample)をご覧ください。
 
 ---
 
-*Last updated: {{ "now" | date: "%B %d, %Y" }}*
+*最終更新: {{ "now" | date: "%Y年%m月%d日" }}*

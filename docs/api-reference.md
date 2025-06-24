@@ -1,17 +1,17 @@
 ---
 layout: default
-title: API Reference
+title: APIリファレンス
 nav_order: 3
-description: "Complete API documentation with examples"
+description: "実例付きの完全なAPIドキュメント"
 ---
 
-# API Reference
+# APIリファレンス
 {: .no_toc }
 
-Complete reference for all API endpoints with examples and response formats.
+実例とレスポンス形式を含む、すべてのAPIエンドポイントの完全なリファレンスです。
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## 目次
 {: .no_toc .text-delta }
 
 1. TOC
@@ -19,58 +19,58 @@ Complete reference for all API endpoints with examples and response formats.
 
 ---
 
-## Authentication
+## 認証
 
-All API requests require authentication using an API key. Include your API key in the request headers:
+すべてのAPIリクエストはAPIキーを使用した認証が必要です。リクエストヘッダーにAPIキーを含めてください:
 
 ```http
 Authorization: Bearer YOUR_API_KEY
 Content-Type: application/json
 ```
 
-## Base URL
+## ベースURL
 
-All API endpoints are relative to the base URL:
+すべてのAPIエンドポイントは、ベースURLに対する相対URLです:
 
 ```
 https://api.example.com/v1
 ```
 
-## Users API
+## ユーザーAPI
 
-### Get All Users
+### 全ユーザー取得
 
-Retrieve a list of all users.
+すべてのユーザーのリストを取得します。
 
 ```http
 GET /users
 ```
 
-**Parameters:**
+**パラメータ:**
 
-| Parameter | Type | Description |
+| パラメータ | タイプ | 説明 |
 |:----------|:-----|:------------|
-| `page` | integer | Page number (default: 1) |
-| `limit` | integer | Number of results per page (default: 20, max: 100) |
-| `sort` | string | Sort field (name, email, created_at) |
-| `order` | string | Sort order (asc, desc) |
+| `page` | integer | ページ番号（デフォルト: 1） |
+| `limit` | integer | ページあたりの結果数（デフォルト: 20、最大: 100） |
+| `sort` | string | ソートフィールド（name, email, created_at） |
+| `order` | string | ソート順（asc, desc） |
 
-**Example Request:**
+**リクエスト例:**
 
 ```bash
 curl -X GET "https://api.example.com/v1/users?page=1&limit=10" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
-**Example Response:**
+**レスポンス例:**
 
 ```json
 {
   "data": [
     {
       "id": "user_123",
-      "name": "John Doe",
-      "email": "john@example.com",
+      "name": "山田太郎",
+      "email": "yamada@example.com",
       "created_at": "2023-06-20T10:30:00Z",
       "updated_at": "2023-06-21T14:15:00Z"
     }
@@ -84,38 +84,38 @@ curl -X GET "https://api.example.com/v1/users?page=1&limit=10" \
 }
 ```
 
-### Get Single User
+### 単一ユーザー取得
 
-Retrieve a specific user by ID.
+IDを指定して特定のユーザーを取得します。
 
 ```http
 GET /users/{id}
 ```
 
-**Parameters:**
+**パラメータ:**
 
-| Parameter | Type | Description |
+| パラメータ | タイプ | 説明 |
 |:----------|:-----|:------------|
-| `id` | string | User ID |
+| `id` | string | ユーザーID |
 
-**Example Request:**
+**リクエスト例:**
 
 ```bash
 curl -X GET "https://api.example.com/v1/users/user_123" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
-**Example Response:**
+**レスポンス例:**
 
 ```json
 {
   "data": {
     "id": "user_123",
-    "name": "John Doe",
-    "email": "john@example.com",
+    "name": "山田太郎",
+    "email": "yamada@example.com",
     "profile": {
-      "avatar": "https://example.com/avatars/john.jpg",
-      "bio": "Software developer"
+      "avatar": "https://example.com/avatars/yamada.jpg",
+      "bio": "ソフトウェア開発者"
     },
     "created_at": "2023-06-20T10:30:00Z",
     "updated_at": "2023-06-21T14:15:00Z"
@@ -123,56 +123,56 @@ curl -X GET "https://api.example.com/v1/users/user_123" \
 }
 ```
 
-### Create User
+### ユーザー作成
 
-Create a new user.
+新しいユーザーを作成します。
 
 ```http
 POST /users
 ```
 
-**Request Body:**
+**リクエストボディ:**
 
 ```json
 {
-  "name": "Jane Smith",
-  "email": "jane@example.com",
+  "name": "佐藤花子",
+  "email": "sato@example.com",
   "password": "secure_password_123"
 }
 ```
 
-**Example Request:**
+**リクエスト例:**
 
 ```bash
 curl -X POST "https://api.example.com/v1/users" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Jane Smith",
-    "email": "jane@example.com",
+    "name": "佐藤花子",
+    "email": "sato@example.com",
     "password": "secure_password_123"
   }'
 ```
 
-## Projects API
+## プロジェクトAPI
 
-### Get All Projects
+### 全プロジェクト取得
 
-Retrieve a list of all projects.
+すべてのプロジェクトのリストを取得します。
 
 ```http
 GET /projects
 ```
 
-**Example Response:**
+**レスポンス例:**
 
 ```json
 {
   "data": [
     {
       "id": "proj_456",
-      "name": "My Awesome Project",
-      "description": "A great project description",
+      "name": "素晴らしいプロジェクト",
+      "description": "プロジェクトの説明",
       "status": "active",
       "owner_id": "user_123",
       "created_at": "2023-06-20T10:30:00Z"
@@ -181,39 +181,39 @@ GET /projects
 }
 ```
 
-## Error Responses
+## エラーレスポンス
 
-The API uses conventional HTTP response codes:
+APIは標準的なHTTPレスポンスコードを使用します:
 
-| Status Code | Description |
+| ステータスコード | 説明 |
 |:------------|:------------|
-| 200 | OK - Request successful |
-| 201 | Created - Resource created successfully |
-| 400 | Bad Request - Invalid request parameters |
-| 401 | Unauthorized - Invalid or missing API key |
-| 403 | Forbidden - Insufficient permissions |
-| 404 | Not Found - Resource not found |
-| 429 | Too Many Requests - Rate limit exceeded |
-| 500 | Internal Server Error - Server error |
+| 200 | OK - リクエスト成功 |
+| 201 | Created - リソース作成成功 |
+| 400 | Bad Request - 無効なリクエストパラメータ |
+| 401 | Unauthorized - 無効または欠如したAPIキー |
+| 403 | Forbidden - 権限不足 |
+| 404 | Not Found - リソースが見つからない |
+| 429 | Too Many Requests - レート制限超過 |
+| 500 | Internal Server Error - サーバーエラー |
 
-**Error Response Format:**
+**エラーレスポンス形式:**
 
 ```json
 {
   "error": {
     "code": "INVALID_REQUEST",
-    "message": "The request parameters are invalid",
+    "message": "リクエストパラメータが無効です",
     "details": {
       "field": "email",
-      "issue": "Email address is already in use"
+      "issue": "このメールアドレスは既に使用されています"
     }
   }
 }
 ```
 
-## Rate Limiting
+## レート制限
 
-API requests are limited to 1000 requests per hour per API key. Rate limit information is included in response headers:
+APIリクエストは、APIキーあたり1時間に1000リクエストまでに制限されています。レート制限情報はレスポンスヘッダーに含まれています:
 
 ```http
 X-RateLimit-Limit: 1000
